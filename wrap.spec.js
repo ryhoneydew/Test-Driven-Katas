@@ -13,13 +13,14 @@ describe("wrap", () => {
         20
       )
     ).to.equal(
-      "Lorem ipsum dolor\n sit eu amet, elit na\n magna sem amet nulla\n vel purus ac ligula."
+      "Lorem ipsum dolor\nsit eu amet, elit na\nmagna sem amet nulla\nvel purus ac ligula."
     );
   });
 
   it("Returns the same string if the length given is bigger than the line's length", () => {
     expect(wrap("hello world", 40)).to.equal("hello world");
   });
+
   it("Throws an error if the inputs are invalid", () => {
     expect(wrap([], NaN)).to.equal("Invalid inputs");
   });
